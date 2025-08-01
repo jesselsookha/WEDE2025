@@ -24,7 +24,7 @@ The repository is organized as follows:
 │   ├── 01\_intro/       # Learning Unit 1 – Why Websites Matter
 │   ├── 02\_structure/   # Learning Unit 2 – File Structure & VS Code
 │   └── ...             # Future units (HTML, CSS, JavaScript, etc.)
-││
+│
 ├── examples/           # Code snippets and templates used in class
 │
 └── README.md           # This file
