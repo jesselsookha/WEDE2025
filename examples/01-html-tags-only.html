@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"> <!-- Character encoding -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive scaling -->
+  <meta name="author" content="Lecturer Name">
+  <meta name="description" content="A sample HTML page showcasing many tags for web development students.">
+  <meta name="keywords" content="HTML, web development, tutorial, tags">
+
+  <title>HTML Tag Overview</title>
+
+  <link rel="icon" href="favicon.ico"> <!-- Optional site icon -->
+</head>
+<body>
+
+  <!-- Semantic layout structure -->
+  <header>
+    <h1>Welcome to HTML!</h1>
+    <nav>
+      <ul>
+        <li><a href="#intro">Introduction</a></li>
+        <li><a href="#media">Media</a></li>
+        <li><a href="#forms">Forms</a></li>
+        <li><a href="#tables">Tables</a></li>
+        <li><a href="#lists">Lists</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Section: Introduction -->
+    <section id="intro">
+      <h2>Introduction</h2>
+      <p>This page demonstrates many common <strong>HTML tags</strong>. It is a <em>useful reference</em> for new developers.</p>
+
+      <article>
+        <h3>Article Example</h3>
+        <p>This is an article block, often used in blogs or news websites. It has its own heading and content.</p>
+      </article>
+
+      <aside>
+        <h4>Did You Know?</h4>
+        <p>The <code>&lt;aside&gt;</code> tag is used for related content, like tips or links.</p>
+      </aside>
+
+      <blockquote cite="https://developer.mozilla.org">
+        “HTML is the standard markup language for creating Web pages.”
+      </blockquote>
+
+      <hr> <!-- Horizontal line -->
+    </section>
+
+    <!-- Section: Media -->
+    <section id="media">
+      <h2>Images, Audio & Video</h2>
+      <figure>
+        <img src="example.jpg" alt="A sample image" width="300">
+        <figcaption>Figure 1: A sample image with a caption.</figcaption>
+      </figure>
+
+      <audio controls>
+        <source src="sample-audio.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+
+      <video width="320" height="240" controls>
+        <source src="sample-video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </section>
+
+    <!-- Section: Forms -->
+    <section id="forms">
+      <h2>Forms and Inputs</h2>
+      <form action="#" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br><br>
+
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="4" cols="30"></textarea><br><br>
+
+        <label>Gender:</label>
+        <input type="radio" name="gender" value="male"> Male
+        <input type="radio" name="gender" value="female"> Female<br><br>
+
+        <label for="fruit">Choose a fruit:</label>
+        <select id="fruit" name="fruit">
+          <option value="apple">Apple</option>
+          <option value="banana">Banana</option>
+          <option value="orange">Orange</option>
+        </select><br><br>
+
+        <input type="checkbox" name="subscribe" value="yes"> Subscribe to newsletter<br><br>
+
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+      </form>
+    </section>
+
+    <!-- Section: Tables -->
+    <section id="tables">
+      <h2>Tables</h2>
+      <table border="1">
+        <caption>Student Grades</caption>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Subject</th>
+            <th>Grade</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>John</td>
+            <td>HTML</td>
+            <td>A</td>
+          </tr>
+          <tr>
+            <td>Jane</td>
+            <td>CSS</td>
+            <td>B</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="3">End of Results</td>
+          </tr>
+        </tfoot>
+      </table>
+    </section>
+
+    <!-- Section: Lists -->
+    <section id="lists">
+      <h2>Lists</h2>
+      <h3>Unordered List</h3>
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+      </ul>
+
+      <h3>Ordered List</h3>
+      <ol>
+        <li>Setup VS Code</li>
+        <li>Create HTML file</li>
+        <li>Write content</li>
+      </ol>
+
+      <h3>Description List</h3>
+      <dl>
+        <dt>HTML</dt>
+        <dd>HyperText Markup Language</dd>
+        <dt>CSS</dt>
+        <dd>Cascading Style Sheets</dd>
+      </dl>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Web Dev Course. All rights reserved.</p>
+    <address>
+      Contact: <a href="mailto:info@example.com">info@example.com</a>
+    </address>
+  </footer>
+
+</body>
+</html>
