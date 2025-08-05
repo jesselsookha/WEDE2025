@@ -20,12 +20,14 @@ The repository is organized as follows:
 
 ```
 /
-├── docs/               # Course notes and learning unit guides
+├── docs/                # Course notes and learning unit guides
 │   ├── 01\_intro/       # Learning Unit 1 – Why Websites Matter
 │   ├── 02\_structure/   # Learning Unit 2 – File Structure & VS Code
-│   └── ...             # Future units (HTML, CSS, JavaScript, etc.)
+│   └── ...              # Future units (HTML, CSS, JavaScript, etc.)
 │
-├── examples/           # Code snippets and templates used in class
+├── examples/            # Code snippets and templates used in class
+│
+├── notes/               # Based on examples/ - expanded notes discussed in class
 │
 └── README.md           # This file
 
