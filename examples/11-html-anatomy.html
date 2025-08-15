@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Anatomy of a Web Page</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      line-height: 1.6;
+    }
+    nav {
+      background: #f4f4f4;
+      padding: 10px;
+    }
+    nav a {
+      margin-right: 15px;
+    }
+    section {
+      margin: 40px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>The Anatomy of a Web Page</h1>
+    <p>A journey through HTML structure using semantic tags.</p>
+    <nav>
+      <a href="#introduction">Introduction</a>
+      <a href="#lists">Lists</a>
+      <a href="#links">Links</a>
+      <a href="#images">Images</a>
+      <a href="#table">Table</a>
+      <a href="#form">Form</a>
+      <a href="#article">Article</a>
+      <a href="#footer">Footer</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <section id="introduction">
+      <h2>Introduction</h2>
+      <p>This page is designed to demonstrate the structure and flow of a basic web page using semantic HTML elements. We’ll travel from navigation, through content, and down to the form and footer.</p>
+    </section>
+
+    <section id="lists">
+      <h2>Lists</h2>
+      <h3>Ordered Steps</h3>
+      <ol>
+        <li>Plan your content</li>
+        <li>Write semantic HTML</li>
+        <li>Validate structure</li>
+        <li>Add accessibility features</li>
+      </ol>
+
+      <h3>Unordered Features</h3>
+      <ul>
+        <li>Accessible</li>
+        <li>Search-engine friendly</li>
+        <li>Structured</li>
+        <li>Clean</li>
+      </ul>
+
+      <h3>Definition List</h3>
+      <dl>
+        <dt>HTML</dt>
+        <dd>HyperText Markup Language</dd>
+        <dt>CSS</dt>
+        <dd>Cascading Style Sheets</dd>
+      </dl>
+    </section>
+
+    <section id="links">
+      <h2>Links</h2>
+      <p>Links let users navigate:</p>
+      <ul>
+        <li><a href="https://developer.mozilla.org/" target="_blank">External: MDN Web Docs</a></li>
+        <li><a href="#form">Jump to the Form section</a></li>
+        <li><a href="mailto:contact@example.com">Send us an email</a></li>
+        <li><a href="#top">Back to Top</a></li>
+      </ul>
+    </section>
+
+    <section id="images">
+      <h2>Images</h2>
+      <figure>
+        <img src="https://placehold.co/600x300" alt="Placeholder landscape" width="600" height="300" />
+        <figcaption>A placeholder image representing visual content.</figcaption>
+      </figure>
+    </section>
+
+    <section id="table">
+      <h2>Table</h2>
+      <table border="1">
+        <caption>Simple Sales Report</caption>
+        <thead>
+          <tr>
+            <th>Month</th>
+            <th>Sales</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>January</th>
+            <td>$5,000</td>
+          </tr>
+          <tr>
+            <th>February</th>
+            <td>$6,200</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <th>Total</th>
+            <td>$11,200</td>
+          </tr>
+        </tfoot>
+      </table>
+    </section>
+
+    <section id="form">
+      <h2>Form</h2>
+      <form action="/submit" method="POST">
+        <fieldset>
+          <legend>Feedback</legend>
+          <label for="name">Name:</label><br>
+          <input type="text" id="name" name="name" required><br><br>
+
+          <label for="email">Email:</label><br>
+          <input type="email" id="email" name="email" required><br><br>
+
+          <label for="rating">How do you rate this page?</label><br>
+          <input type="range" id="rating" name="rating" min="1" max="10"><br><br>
+
+          <label for="comments">Comments:</label><br>
+          <textarea id="comments" name="comments" rows="4" cols="40"></textarea><br><br>
+
+          <button type="submit">Submit</button>
+        </fieldset>
+      </form>
+    </section>
+
+    <section id="article">
+      <h2>Article</h2>
+      <article>
+        <h3>The Role of Semantic HTML</h3>
+        <p>Semantic HTML elements clearly describe their meaning both to the browser and the developer. For example, <code>&lt;article&gt;</code> defines independent, self-contained content.</p>
+        <blockquote>
+          <p>"Semantic HTML is the foundation of accessible and well-structured content."</p>
+          <footer>— Web Standards Advocate</footer>
+        </blockquote>
+      </article>
+
+      <aside>
+        <h4>Did you know?</h4>
+        <p>The <code>&lt;aside&gt;</code> element is used for tangential content, like notes or related links.</p>
+      </aside>
+    </section>
+
+  </main>
+
+  <footer id="footer">
+    <p>&copy; 2025 Web Development Essentials. <a href="#top">Back to Top</a></p>
+  </footer>
+
+</body>
+</html>
