@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tables & Forms</title>
+</head>
+<body>
+
+  <h1>Tables & Forms</h1>
+
+  <!-- ========================
+       TABLES SECTION
+  ============================-->
+
+  <!-- Table using semantic elements: thead, tbody, tfoot -->
+  <section>
+    <h2>Table: Employee Attendance</h2>
+
+    <table border="1">
+      <!-- <caption> provides a title/summary for the table -->
+      <caption>Employee Attendance (Q1)</caption>
+
+      <!-- <thead>: Header row of the table -->
+      <thead>
+        <tr>
+          <th scope="col">Name</th>         <!-- scope="col" indicates column header -->
+          <th scope="col">January</th>
+          <th scope="col">February</th>
+          <th scope="col">March</th>
+          <th scope="col">Total Days</th>
+        </tr>
+      </thead>
+
+      <!-- <tbody>: Body rows of the table -->
+      <tbody>
+        <tr>
+          <th scope="row">Alice</th>        <!-- scope="row" indicates row header -->
+          <td>20</td>
+          <td>18</td>
+          <td>22</td>
+          <td>60</td>
+        </tr>
+        <tr>
+          <th scope="row">Bob</th>
+          <td>19</td>
+          <td>20</td>
+          <td>21</td>
+          <td>60</td>
+        </tr>
+      </tbody>
+
+      <!-- <tfoot>: Footer row of the table -->
+      <tfoot>
+        <tr>
+          <th scope="row">Average</th>
+          <td>19.5</td>
+          <td>19</td>
+          <td>21.5</td>
+          <td>60</td>
+        </tr>
+      </tfoot>
+    </table>
+  </section>
+
+  <hr>
+
+  <!-- Accessible Table: Role and ARIA attributes enhance accessibility -->
+  <section role="region" aria-labelledby="sales-heading" tabindex="0">
+    <h2 id="sales-heading">Q2 Product Sales</h2>
+
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>April</th>
+          <th>May</th>
+          <th>June</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">Laptops</th>
+          <td>$8,000</td>
+          <td>$7,500</td>
+          <td>$9,000</td>
+        </tr>
+        <tr>
+          <th scope="row">Phones</th>
+          <td>$5,500</td>
+          <td>$6,200</td>
+          <td>$6,800</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <hr>
+
+  <!-- Simple Table Example (basic structure) -->
+  <section>
+    <h2>Simple Table</h2>
+
+    <table border="1">
+      <!-- No thead/tbody/tfoot, just rows and cells -->
+      <tr>
+        <td>Item</td>
+        <td>Price</td>
+      </tr>
+      <tr>
+        <td>Book</td>
+        <td>$10</td>
+      </tr>
+    </table>
+  </section>
+
+  <hr>
+
+  <!-- Table using colspan and rowspan -->
+  <section>
+    <h2>Complex Table with Colspan & Rowspan</h2>
+
+    <table border="1">
+      <tr>
+        <th rowspan="2">Name</th>            <!-- Spans two rows -->
+        <th colspan="2">Scores</th>          <!-- Spans two columns -->
+      </tr>
+      <tr>
+        <th>Math</th>
+        <th>Science</th>
+      </tr>
+      <tr>
+        <td>Anna</td>
+        <td>85</td>
+        <td>90</td>
+      </tr>
+      <tr>
+        <td>John</td>
+        <td>78</td>
+        <td>88</td>
+      </tr>
+    </table>
+  </section>
+
+  <hr>
+
+  <!-- ========================
+       FORMS SECTION
+  ============================-->
+
+  <section>
+    <h2>Basic Form: Feedback</h2>
+
+    <!-- 
+      FORM ELEMENT:
+      - action: URL to send form data to
+      - method: HTTP method (GET or POST)
+        - GET: appends data to URL (use for non-sensitive data)
+        - POST: sends data securely in request body
+    -->
+    <form action="/submit-feedback" method="POST">
+      <fieldset>
+        <legend>User Feedback</legend> <!-- Describes grouped fields -->
+
+        <!-- Text input -->
+        <div>
+          <label for="fullname">Full Name:</label>
+          <input type="text" id="fullname" name="fullname" required>
+        </div>
+
+        <!-- Email input (validates email format) -->
+        <div>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <!-- Telephone input with pattern -->
+        <div>
+          <label for="phone">Phone:</label>
+          <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="e.g., 0123456789">
+        </div>
+
+        <!-- Date input -->
+        <div>
+          <label for="dob">Date of Birth:</label>
+          <input type="date" id="dob" name="dob">
+        </div>
+
+        <!-- Password input with validation -->
+        <div>
+          <label for="password">Password:</label>
+          <input 
+            type="password" 
+            id="password" 
+            name="password" 
+            minlength="8" 
+            pattern="(?=.*\d)(?=.*[a-z]).{8,}" 
+            aria-describedby="password-help"
+            required
+          >
+          <span id="password-help">At least 8 characters with a number</span>
+        </div>
+
+        <!-- Color picker input -->
+        <div>
+          <label for="color">Favorite Color:</label>
+          <input type="color" id="color" name="color">
+        </div>
+
+        <!-- Range slider -->
+        <div>
+          <label for="satisfaction">Satisfaction (1–10):</label>
+          <input type="range" id="satisfaction" name="satisfaction" min="1" max="10">
+        </div>
+
+        <!-- Textarea for comments -->
+        <div>
+          <label for="comments">Additional Comments:</label><br>
+          <textarea id="comments" name="comments" rows="4" cols="40"></textarea>
+        </div>
+
+        <!-- Checkbox -->
+        <div>
+          <label for="newsletter">Subscribe:</label>
+          <input type="checkbox" id="newsletter" name="newsletter" checked>
+        </div>
+
+        <!-- Radio buttons -->
+        <div>
+          <p>Preferred Contact Method:</p>
+          <input type="radio" id="contact-email" name="contact" value="email" checked>
+          <label for="contact-email">Email</label>
+          <input type="radio" id="contact-phone" name="contact" value="phone">
+          <label for="contact-phone">Phone</label>
+        </div>
+      </fieldset>
+
+      <!-- Submit button -->
+      <button type="submit">Submit Feedback</button>
+    </form>
+  </section>
+
+  <hr>
+
+  <!-- Additional Input Examples -->
+  <section>
+    <h2>Extra Input Examples (Reference Only)</h2>
+    <ul>
+      <li><code>&lt;input type="number" min="0" max="100"&gt;</code> — Numeric input with range</li>
+      <li><code>&lt;input type="search" aria-label="Search site"&gt;</code> — Search box</li>
+      <li><code>&lt;input type="url" placeholder="https://example.com"&gt;</code> — URL input with placeholder</li>
+      <li><code>&lt;input type="file" accept=".pdf, image/*"&gt;</code> — File upload limited to PDF and images</li>
+    </ul>
+  </section>
+
+</body>
+</html>
