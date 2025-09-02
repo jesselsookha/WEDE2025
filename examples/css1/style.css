@@ -1,0 +1,28 @@
+ h1 {
+    color: red; 
+    font-family: Arial; 
+}
+
+p {
+    font-size: 18px; 
+    color: #333333; 
+}
+
+a {
+    color: blue; 
+    text-decoration: none; 
+}
+
+.card {
+	background-color: #fefefe; 
+	padding: 20px; 
+	border-radius: 4px; 
+	width: 300px;
+	margin: auto; 
+	text-align: center; 
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+}
+
+.card h1 {
+	color: blue; 
+}
