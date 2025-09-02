@@ -1,0 +1,81 @@
+
+* {
+  margin: 0; 
+  padding: 0; 
+}
+
+/* Typography */
+
+body {
+  font-family: "Roboto Mono", monospace, sans-serif; 
+  font-size: 16px; 		/* base font size (em, rem)*/
+  font-weight: 400; 
+  line-height: 1.6; 
+  color: #333; 
+}
+
+/*
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Other" 
+}
+*/
+
+h1 {
+  font-size: 2.5rem; 
+  font-weight: bold; 
+  text-align: center; 
+  text-transform: uppercase; 
+  letter-spacing: 1px; 
+}
+
+p.subtitle {
+  font-size: 1.2em; 
+  font-style: italic; 
+  color: #666;
+  text-align: center; 
+}
+
+/* Layout */
+
+.box-container { 
+  display: flex; 
+  gap: 1rem; 
+  margin-top: 1rem; 
+  flex-direction: row; 
+}
+
+/* 
+  flex-direction: row; [or] column; [or] row-reverse; [or] column-reverse;
+*/
+
+.box {
+  flex: 1;
+  padding: 1rem; 
+  background-color: #d0ebff;
+  border: 1px solid #99ccee;
+  border-radius: 4px; 
+  text-align: center;  
+}
+
+/* Decorations */ 
+
+.styled-button {
+  background-color: #0077cc; 
+  color: white; 
+  padding: 0.75rem 1.5rem 
+  border: none; 
+  border-radius: 4px; 
+  cursor: pointer;
+}
+
+.styled-button:hover {
+  background-color: #005fa3; 
+}
+
+.decorative-box {
+  margin-top: 1rem; 
+  padding: 1rem; 
+
+  background: linear-gradient(to right, #ffecd2, #fcb69f);
+  border-radius: 8px; 
+}
